@@ -22,6 +22,7 @@
   ],
   "host_permissions": [
     "http://localhost:11434/api/generate",
+	  "https://vaughn.live/*", 
     "http://127.0.0.1:11434/api/generate",
     "https://zap.stream/*",
     "https://www.bigo.tv/*",
