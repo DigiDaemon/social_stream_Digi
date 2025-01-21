@@ -340,6 +340,10 @@
       "js": [ "./sources/vercel.js" ],
       "matches": [ "https://maestro-launcher.vercel.app/" ]
     },
+	  {
+      "js": [ "./sources/vl.js" ],
+      "matches": [ "https://vaughn.live/" ]
+    },
 	{
       "js": [ "./sources/twitcasting.js" ],
       "matches": [ "https://*.twitcasting.tv/*", "https://twitcasting.tv/*" ]
