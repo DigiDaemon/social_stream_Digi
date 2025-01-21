@@ -94,7 +94,7 @@
 		data.membership = "";
 		data.contentimg = "";
 		data.textonly = settings.textonlymode || false;
-		data.type = "floatplane";
+		data.type = "vl";
 		
 		console.log(data);
 		
