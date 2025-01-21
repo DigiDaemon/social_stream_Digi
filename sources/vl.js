@@ -64,24 +64,42 @@
 	function processMessage(ele){
 		
 		console.log(ele);
-		var chatimg = ""; // boo!
-		
+
+	// User Icon
+		var chatimg = "" // boo!
+
+		try (
+			chatimg = ele.querySelector("vs_chatv9_msg_profile_photo img").src;
+		) catch(e)(
+		)
+	 
+	// User Name	
 		var name="";
 		try {
-			name = escapeHtml(ele.querySelector(".chat-username").textContent.trim());
+			name = escapeHtml(ele.querySelector("vs_chatv9_msg_username a span").textContent.trim());
 		} catch(e){
 		}
+
+	// User Messages
 		var msg="";
 		try {
-			msg = getAllContentNodes(ele.querySelector(".chat-text"));
+			msg = getAllContentNodes(ele.querySelector("vs_chatv9_msg_body"));
 		} catch(e){
 		}
-		
+
+	// User Name Color
 		var nameColor = "";
 		try {
-			nameColor = getComputedStyle(ele.querySelector(".chat-username")).color || "";
+			nameColor = getComputedStyle(ele.querySelector("vs_chatv9_color_* ")).color || "";
 		} catch(e){}
+
+	// No Message
 		
+		if (!msg || !name) {
+			return;
+		}
+
+	// Chat Variables
 		var data = {};
 		data.chatname = name;
 		data.chatbadges = "";
