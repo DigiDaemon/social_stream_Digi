@@ -342,7 +342,7 @@
     },
 	  {
       "js": [ "./sources/vl.js" ],
-      "matches": [ "https://vaughn.live/" ]
+      "matches": [ "https://vaughn.live/*" ]
     },
 	{
       "js": [ "./sources/twitcasting.js" ],
